@@ -1,0 +1,9 @@
+git init
+git add .
+git commit -m "first commit"
+--git branch -M main
+git remote add origin https://github.com/mahekkothari16/02Jun_Mahek_Python.git
+git push -u origin master
+
+git config --global user.email "mkotharim@gmail.com"
+git config --global user.name "mahekkothari16"
