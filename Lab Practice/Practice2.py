@@ -200,3 +200,13 @@ def statement():
     pass
 '''
 
+
+def f():
+    
+    # local variable
+    s = "Hello World!"
+    print("Inside Function:", s)
+
+# Driver code
+f()
+print(s)

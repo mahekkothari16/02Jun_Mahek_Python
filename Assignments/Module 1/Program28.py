@@ -6,3 +6,4 @@ for i in List1:
     if i == 'banana':
         continue
     print(i)
+
