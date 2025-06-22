@@ -1,0 +1,1 @@
+# Program 32 : Write a Python program to apply the map() function to square a list of numbers. 

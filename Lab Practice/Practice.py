@@ -117,3 +117,62 @@ while i<=10:
     print(i)
     i+=2'''
 
+'''i=1
+while i<=10:
+    print(f"5*{i}={5*i}")'''
+
+'''n = int(input("Enter the table you want to print: "))
+for i in range(1,11):
+    print(f"{n}*{i}={n*i}")
+'''
+
+'''tables=int(input("How many tables you want to print: "))
+for i in range(tables):
+   no1=int(input("Enter the table: "))
+   for j in range(1,11):
+      print(f"{no1}*{j}={no1*j}")
+'''
+
+'''age= 28 
+str= "My name is Sanket, and I am {}" 
+print(str.format(age)) 
+
+
+str = "hello students,  welcome to python world." #Only first letter capital of first word in sentence
+x = str.capitalize() 
+print (x) 
+
+
+str = "Hello students,  welcome to python world." #everything small
+x = str.casefold() 
+print (x) 
+
+str = "I love apples, apple are my favorite fruit" #counts the number of time word appeared
+x = str.count("apple") 
+print(x)  
+
+str = "Hello, welcome to Python." 
+x = str.endswith(".") 
+print(x)  
+
+str = "Hello, welcome to Python." 
+x = str.find("welcome") 
+x = str.index("welcome") 
+print(x) 
+
+txt = "Sanket123" 
+x = txt.isalnum() 
+print(x)
+
+txt = "Sanket" 
+x = txt.isalpha() 
+print(x) 
+
+txt = "52500" 
+x = txt.isdigit() 
+print(x) 
+
+txt = "welcome to python world" #First letter capital of all the words in the sentence
+x = txt.title() 
+print(x)'''
+
