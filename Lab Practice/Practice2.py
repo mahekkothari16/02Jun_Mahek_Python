@@ -200,13 +200,65 @@ def statement():
     pass
 '''
 
+#Random 
+'''import random
+x = random.random()
+x = random.randint(11111,99999)
+captcha = ['uiYx','Js0c','Jc0w','Ocmx','Jfmd']
+x = random.choice(captcha)
+print(x)
 
-def f():
-    
-    # local variable
-    s = "Hello World!"
-    print("Inside Function:", s)
+random.shuffle(captcha)
+print(captcha)
 
-# Driver code
-f()
-print(s)
+'''
+
+'''import math
+print(math.pi)
+print(math.e)
+x = math.floor(78.56)
+x = math.ceil(78.56)
+x = math.pow(5,4)
+x = math.factorial(5)
+print(x)'''
+
+'''import calendar
+year = int(input("Enter any year: "))
+x = calendar.calendar(year)
+print(x)'''
+
+
+'''import os
+os.system('calc')
+os.system('notepad')
+os.startfile('chrome')
+os.startfile('excel')
+'''
+
+'''import datetime
+x = datetime.datetime.now()
+print(x)
+print("Day:",x.day)
+print("Month:",x.month)
+print("Year:",x.year)
+print("Hours:",x.hour)
+print("Min:",x.minute)
+print("Second:",x.second)
+
+'''
+
+'''import platform
+print(platform.architecture())
+print(platform.machine())
+print(platform.processor)
+print(platform.python_version())'''
+
+
+#import mylib
+#from mylib import sum,sub
+#import mylib as ml
+'''from mylib import *
+
+sum(34,53)
+'''
+
