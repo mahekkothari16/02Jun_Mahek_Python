@@ -1,0 +1,1 @@
+{'101': {'name': 'Mahek', 'contact': '1234567890', 'course': 'BSc(Data Science)', 'marks': {}}}
