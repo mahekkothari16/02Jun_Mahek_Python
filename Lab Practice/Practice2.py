@@ -161,44 +161,6 @@ getdata(102,'niyati','ahmedabad')'''
 getdata([101,'mahek','rajkot'])'''
 
 
-#Bank Management System - 1)Account Opening:a/c number,a/c holder name,a/c type
-                        # 2) Deposit:-Min withdrawal amount 2000
-                        # 3) Withdrawal : id withdrawal money is less than balance error
-                        # 4) Statement : a/c Number,a/c holder name, a/c type, balance -print it
-
-'''num = int(input("Enter the number of your account: "))
-name = input("Enter your name: ")
-type = input("Enter the type of account you want to open ('savings account,personal account')").lower()
-
-def opening():
-    if type == 'savings account' or type=='personal account':
-        print("Account Number: ",num)
-        print("Account Holder Name: ",name)
-        print("Account Type: ",type)
-    else:
-        print("Enter valid account")
-opening()
-dep = input("Enter the amount that you want to deposit: ")
-def deposit():
-    dep1=int(dep)
-    if dep1 < 2000:
-        print("The amount should be greater than 2000.")
-deposit()
-
-def withdrawal():
-    wd = input("Enter the amount you want to withdraw: ")
-    wd1 = int(wd)
-    
-    if wd1 > dep:
-        print("Amount should not be greater than the balance")
-    else:
-        print("Done withdrawal of:",wd1)
-        Current_Balance = dep - wd1
-        print("Current Balance: ",Current_Balance)
-
-def statement():
-    pass
-'''
 
 #Random 
 '''import random
@@ -261,4 +223,64 @@ print(platform.python_version())'''
 
 sum(34,53)
 '''
+
+#requests
+'''import pandas as pd
+import requests as rq
+list = []
+price=[]
+url = "https://fakestoreapi.com/products"
+req = rq.get(url)
+data = req.json()
+
+for i in data:
+    info = ("Product ID:",i["id"],"Name:",i["title"],"Price of Product:",i["price"])
+    list.append(info)
+    price.append(i["price"])
+
+print(list)
+print(price)
+
+df = pd.DataFrame(list)
+print(df)
+
+total=0
+for i in data:
+    #print(i["price"])
+    total+=i["price"]
+
+print("The total of price is:",total)
+'''
+
+#qrcode - for generating qrcode
+'''import qrcode
+url = ""
+#url = "HI,hello students!How are y'll"
+qr = qrcode.make(url)
+qr.save("tops.png")'''
+
+#-u yt-dlp
+#pytubefix - for downloading youtube videos
+'''from pytubefix import YouTube
+url = "https://www.youtube.com/watch?v=3lDJZr6kbsg&list=RD3lDJZr6kbsg&start_radio=1"
+YouTube(url).streams.first().download()
+print("Download Successfully!")
+'''
+
+#pywhatkit for whatsapp messages
+'''
+import pywhatkit as pw
+pw.sendwhatmsg_instantly("+918160939341","Hello Students!")
+'''
+
+#instaloader for downlaoding everything from public account of instagram
+'''import instaloader
+instaID=input("Enter any instagram's ID: ")
+insta = instaloader.instaloader()
+insta.download_profile(instaID)
+print("Download Successfully")'''
+
+
+
+
 

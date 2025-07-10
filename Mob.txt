@@ -1,0 +1,7 @@
+Name: MAHEK KOTHARI
+Email: mkotharim@gmail.com
+Mobile Number: 9876543210
+Password: Mahek1234
+Confirm Password: Mahek1234
+-----------------------------------------------------------
+Password:Mahek1234 Confirm Password:Mahek1234
