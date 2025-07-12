@@ -3,8 +3,25 @@
 studt = {}
 
 class student_detail:
-          
-    def add_student(self):
+
+    def load_students():
+        try:
+            with open("Student.txt", "r") as f:
+                data = f.read()
+                if data:
+                    return eval(data)  # Convert string back to dictionary
+        except FileNotFoundError:
+            pass
+        return {}
+    
+    def save_students(students):
+        with open("student_data.txt", "w") as f:
+            f.write(str(students))
+            f.write("==========================================\n")
+
+
+
+    def add_student(self,students):
         stud = open("Student.txt","a")
         no = int
         fn=str
@@ -37,9 +54,8 @@ class student_detail:
             "Marks":{},
             "Fee":{}        
         }
-        with open("Student.txt","w") as f:
-            f.write("Students:",{studt})
-        f.write("==========================================\n")
+        sd.save_students(students)
+        
 
     def remove_student():
         pass
@@ -54,6 +70,7 @@ sd = student_detail()
 
 while True:
     #MENU
+    students = sd.load_students()
     print("      Press 1 for Counsellor\n"
           "      Press 2 for Faculty\n"
           "      Press 3 for Student\n")

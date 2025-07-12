@@ -299,5 +299,99 @@ sn.getdata()
 sn.gf()'''
 
 
+#Polymorphism - One name multiple form(method overriding:same method name same argument but diff class
+#method overloading : same method diff argument)
+#Method overloading --------- Python do not support this
+'''class students:
+    def getdata(self,id):
+        print("ID:",id)
+    def getdata(self,name):
+        print("Name:",name)
+st=students()
+
+#Method overriding
+class studinfo:
+    def getdata(self,id,name):
+        print("ID:",id)
+        print("Name:",name)
+
+class home(studinfo):
+    def getdata(self, id, name):
+        return super().getdata(id, name)'''
+
+#------------INIT----------
+'''import random
+class studentinfo:
+    def __init__(self,acno):
+        print("A/c NO:",acno)
+
+n=random.randint(11111,99999)
+st=studentinfo(n)'''
+#This is where init is majorly used
+'''import requests
+class home:
+    def __init__(self):
+        try:
+            url="https://www.google.co.in/"
+            response=requests.get(url)
+            print("Internet connection is ON!")
+        except:
+            print("There is no internet connection")
+
+hm = home()'''
+
+
+#PUBLIC-PRIVATE
+'''class studinfo:
+    #PUBLIC
+    stid=12
+    stnm="Mahek"
+    #private
+    __stid=14
+    __stnm = "Mahek"
+
+    def __getdata(self):
+        print("This is getdata")
+        print("ID:",self.__stid)
+        print("Name:",self.__stnm)
+    
+    def printdata(self):
+        self.__getdata()
+st=studinfo()
+st.printdata()
+'''
+
+#Static Method
+class studinfo:
+    @staticmethod #For not writinf self and we cannot change it
+    def sum(a,b):
+        print("Sum is:",a+b)
+f = studinfo()
+f.sum()
+
+#From instance we cannot change the value and with object we can
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
