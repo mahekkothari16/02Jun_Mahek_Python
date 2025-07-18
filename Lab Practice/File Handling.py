@@ -374,7 +374,7 @@ f.sum()'''
 
 
 
-studt = {}
+'''studt = {}
 
 class student_detail:
 
@@ -477,28 +477,191 @@ while True:
         elif fc == 2:
             sd.view_all_stud()
         else:
-            print("Enter Valid Choice!")
+            print("Enter Valid Choice!")'''
+
+
+#Regular Expression
+'''import re
+mystr = input("Enter what you want to find: ").lower()
+x = re.search('python',mystr)
+print(x)
+
+if x:
+    print("Match Found")
+else:
+    print("Error")'''
+
+
+#Match Function - Works only for beginning word before the space
+'''import re
+mystr = input("Enter what you want to find: ").lower()
+x = re.match('python',mystr)
+print(x)
+
+if x:
+    print("Match Found")
+else:
+    print("Error")'''
 
 
 
+#Findall
+'''import re
+mystr = input("Enter what you want to find: ").lower()
+x = re.findall('python',mystr)
+print(x)
+
+if x:
+    print("Match Found")
+else:
+    print("Error")
+'''
+
+#Ignorecase 
+'''import re
+mystr = input('Enter the sentence: ')
+#x = re.findall('[A-Za-z]',mystr)
+#x = re.findall('[0-9]',mystr)
+x = re.findall('[A-Za-z0-9]',mystr)
+x = re.findall('[A-Za-z0-9@.]',mystr)
+print(x)
+
+'''
+
+
+#DOTALL
+'''import re
+mystr = input('Enter the sentence: ')
+x = re.findall("Py..on",mystr)
+print(x)'''
 
 
 
+#XVERBOSE
+'''import re
+mystr = input('Enter the sentence: ')
+x = re.findall('[this|that]',mystr)
+print(x)'''
+
+
+#MULTILINE
+'''import re
+mystr = "This is Python"
+#Beginning Restriction
+x = re.findall("^This",mystr)
+x = re.findall("[A-Z]",mystr)
+#Ending Restriction
+x = re.findall("on$",mystr)
+print(x)'''
+
+
+#ASCII (\w, \W, \b, \B, \s, \S, \d, \D)
+'''
+import re
+mystr = "This is Python!"
+x = re.findall('\w',mystr)
+x = re.findall('\W',mystr)
+x = re.findall('\s',mystr)
+x = re.findall('\S',mystr)
+x = re.findall('\d',mystr)
+print(x)
+'''
+
+
+#Username Pattern
+'''import re
+username = "Mahek1313"
+#usenm_pattern = "[A-Za-z0-0]" Inside bracket it is counted optional
+usenm_pattern = "[A-Z]+[a-z]+[0-9]"
+x = re.findall(usenm_pattern,username)
+if x:
+    print("Username is Valid")
+else:
+    print("Error,Invalid Username")'''
 
 
 
+'''import re
+username = input("Enter the Email: ")
+usenm_pattern = "[[^a-z]+[0-9]+[@]+[gmail,outlook,yahoo]+[.]+[com,in$]"
+x = re.findall(usenm_pattern,username)
+if x:
+    print("Username is Valid")
+else:
+    print("Error,Invalid Username")'''
 
 
 
+### TKINTER
+'''import tkinter
+from tkinter import ttk
+window = tkinter.Tk()
+window.title("MyApp")
+window.geometry("400x500")
+window.config(bg='lightpink')
+tkinter.Label(text="Firstname:").place(x=0,y=0) #Pack we can use upon place
+tkinter.Label(text="Firstname:").place(x=0,y=30)
+tkinter.Label(text="Firstname:",bg='lightblue',fg='brown',font='Elephant 15').grid(row=0,column=0,sticky='w')
+tkinter.Label(text="Lastname:",bg='lightblue',fg='brown',font='Elephant 15').grid(row=1,column=0,sticky='w')
+txt1 = tkinter.Entry()
+txt1.grid(row=0,column=1)
+txt2 = tkinter.Entry()
+txt2.grid(row=1,column=1)
+tkinter.Radiobutton(value=0,text="Male").grid(row=2,column=0,sticky='w')
+tkinter.Radiobutton(value=1,text="Female").grid(row=2,column=1,sticky='w')
+
+tkinter.Checkbutton(text="Gujarati").grid(row=3,column=0,sticky='w')
+tkinter.Checkbutton(text="Hindi").grid(row=4,column=0,sticky='w')
+tkinter.Checkbutton(text="English").grid(row=5,column=0,sticky='w')
+
+city=['Rajkot','Ahmedabad','Morbi','Surat','Jamnagar']
+ttk.Combobox(values=city).grid(row=6,column=0)
+
+def btnclick():
+    print("Button Clicked")
+    print("Firstname:",txt1.get())
+    print("Secondname:",txt2.get())
+
+tkinter.Button(text="Submit",font='Elephant 15',command=btnclick).place(x=150,y=270)
+
+window.mainloop()
+'''
 
 
+import tkinter
+from tkinter import ttk
+window = tkinter.Tk()
+window.title("MyApp")
+window.geometry("400x500")
+window.config(bg='lightpink')
+
+tkinter.Label(text="First Number:",fg='brown',font='Elephant 15').grid(row=0,column=0,sticky='w')
+tkinter.Label(text="Second Number:",fg='brown',font='Elephant 15').grid(row=1,column=0,sticky='w')
+
+txt1 = tkinter.Entry()
+txt1.grid(row=0,column=1)
+txt2 = tkinter.Entry()
+txt2.grid(row=1,column=1)
 
 
+def add():
+    q1 = int(txt1.get())
+    q2 = int(txt2.get())
+    print("Addition:",q1+q2)
+
+def sub():
+    pass
+
+def mult():
+    pass
+
+def div():
+    pass
+
+clk1 = tkinter.Button(text="Addition",fg='brown',font='Elephant 8',command=add).grid(row=2,column=0,sticky='w')
+clk2 = tkinter.Button(text="Subtraction",fg='brown',font='Elephant 8',command=sub).grid(row=3,column=0,sticky='w')
+clk3 = tkinter.Button(text="Multiplication",fg='brown',font='Elephant 8',command=mult).grid(row=4,column=0,sticky='w')
+clk4 =tkinter.Button(text="Division",fg='brown',font='Elephant 8',command=div).grid(row=5,column=0,sticky='w')
 
 
-
-
-
-
-
-
+window.mainloop()
