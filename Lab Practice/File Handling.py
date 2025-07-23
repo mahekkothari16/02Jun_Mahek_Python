@@ -627,7 +627,7 @@ tkinter.Button(text="Submit",font='Elephant 15',command=btnclick).place(x=150,y=
 window.mainloop()
 '''
 
-
+'''
 import tkinter
 from tkinter import ttk
 window = tkinter.Tk()
@@ -665,3 +665,4 @@ clk4 =tkinter.Button(text="Division",fg='brown',font='Elephant 8',command=div).g
 
 
 window.mainloop()
+'''
