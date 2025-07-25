@@ -5,7 +5,7 @@ class DBConnection:
         self.conn = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="yourpassword",
+            password="Mahek#1608",
             database="billing_db"
         )
         self.cursor = self.conn.cursor()
